@@ -1,4 +1,4 @@
-# Digital interactive Installations
+# Digital Interactive Installation Guide
 
 Last Updated: 27 July 2021
 
