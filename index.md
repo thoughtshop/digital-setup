@@ -38,6 +38,7 @@ Last Updated: 27 July 2021
 ### D - Add Startup Apple  Script
 1. Install [Google Chrome](https://www.google.com/intl/en_ca/chrome/)
 2. Open Script Editor and paste and edit one of these scripts (Chrome preferred, safari should only be used as a fallback):
+	
 	2.1 For Chrome:
 	```
 	set theURL to "[URL]"
