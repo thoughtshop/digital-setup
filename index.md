@@ -38,8 +38,56 @@ Last Updated: 27 July 2021
 ### D - Add Startup Apple  Script
 1. Install [Google Chrome](https://www.google.com/intl/en_ca/chrome/)
 2. Open Script Editor and paste and edit one of these scripts (Chrome preferred, safari should only be used as a fallback):
-	2.1 For Chrome: https://gist.github.com/coreylowe/ea179e0b98180243ccfbecbea3bf809c
-	2.2 For Safari: https://gist.github.com/coreylowe/8aa26c45d8692310808e5c14a8aa0d62
+	2.1 For Chrome:
+	```
+	set theURL to "[URL]"
+
+	delay 10
+
+	if application "Google Chrome" is running then
+		tell application "Google Chrome"
+			activate
+			close every window
+			make new window with properties {mode:"incognito"}
+			tell active tab of window 1
+				set URL to theURL
+			end tell
+		end tell
+	else
+		tell application "Google Chrome"
+			activate
+			close window 1
+			delay 2
+			make new window with properties {mode:"incognito"}
+			tell active tab of window 1
+				set URL to theURL
+			end tell
+		end tell
+	end if
+
+	delay 2
+
+	tell application "System Events"
+		keystroke "f" using {command down, control down}
+	end tell
+	```
+	
+	2.2 For Safari: 
+	```
+	set theURL to "[URL]"
+
+	tell application "Safari"
+		activate
+		close every window
+		open location theURL
+	end tell
+
+	delay 2
+
+	tell application "System Events"
+		keystroke "f" using {command down, control down}
+	end tell
+	```
 3. Update the `[url]` placeholder in the script
 4. If using Chrome, under `View`, disable the **Always show toolbar in fullscreen** option
 5. Export as an Application, to the `~/Documents` folder.
