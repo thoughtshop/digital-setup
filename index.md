@@ -29,7 +29,7 @@ Last Updated: 27 July 2021
   10.2. Disable **Put hard disks to sleep when possible**
   10.3. Enable **Start up automatically after a power failure**
 
-### C- LogMeIn Setup
+### C - LogMeIn Setup
 1. Install LogMeIn. Go to [LogMeIn.com](https://logmein.com) using our account (in LastPass). Follow all the prompts and grant all permissions to install
 2. `LogMeIn Control Panel > Options > Preferences and Security`
   2.1 Disable **Lock when connection has been lost** 
