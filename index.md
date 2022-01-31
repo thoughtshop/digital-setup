@@ -68,8 +68,8 @@ Last Updated: 27 July 2021
 
 	delay 2
 
-	tell application "System Events"
-		keystroke "f" using {command down, control down}
+	tell application "System Events" to tell process "Google Chrome"
+		set value of attribute "AXFullScreen" of window 1 to true
 	end tell
 	```
 	
